@@ -44,6 +44,7 @@ export const scrap = async (req: Request, res: Response) => {
   await page.click(".nav-search-submit > input:nth-child(2)");
   await page.waitForSelector("h2.a-size-medium");
   page.click("h2.a-size-medium");
+  await page.waitForSelector(".a-size-base.a-color-price.a-color-price");
 
   // const { price, title } = await getElements(page);
   // if (price < req.query.min) {
