@@ -50,5 +50,5 @@ export const scrap = async (req: Request, res: Response) => {
   //   await sendEmail(price, title, page.url());
   // }
   // await browser.close();
-  res.send(page.content());
+  res.send(await page.content());
 };
