@@ -21,6 +21,7 @@
     "@sendgrid/mail": "^6.3.1",
     "express": "^4.16.3",
     "puppeteer": "^1.9.0",
+    "typescript": "^3.1.1",
     "winston": "^3.1.0"
   },
   "devDependencies": {
@@ -29,7 +30,6 @@
     "@types/winston": "^2.4.4",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "tslint-config-prettier": "^1.15.0",
-    "typescript": "^3.1.1"
+    "tslint-config-prettier": "^1.15.0"
   }
 }
