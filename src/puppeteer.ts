@@ -45,10 +45,10 @@ export const scrap = async (req: Request, res: Response) => {
   await page.waitForSelector("h2.a-size-medium");
   page.click("h2.a-size-medium");
 
-  const { price, title } = await getElements(page);
-  if (price < req.query.min) {
-    await sendEmail(price, title, page.url());
-  }
-  await browser.close();
-  res.send(`${price < req.query.min} ${title}: ${price}`);
+  // const { price, title } = await getElements(page);
+  // if (price < req.query.min) {
+  //   await sendEmail(price, title, page.url());
+  // }
+  // await browser.close();
+  res.send(page.content());
 };
