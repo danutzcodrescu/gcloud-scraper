@@ -35,10 +35,11 @@ export const scrap = async (req: Request, res: Response) => {
   const url = req.query.url;
   const page = await startBrowser();
   await page.goto(url);
-  const { price, title } = await getElements(page);
-  if (price < req.query.min) {
-    await sendEmail(price, title, url);
-  }
-  await browser.close();
-  res.send(`${price < req.query.min} ${title}`);
+  // const { price, title } = await getElements(page);
+  // if (price < req.query.min) {
+  //   await sendEmail(price, title, url);
+  // }
+  // await browser.close();
+  // res.send(`${price < req.query.min} ${title}`);
+  res.send(await page.content());
 };
