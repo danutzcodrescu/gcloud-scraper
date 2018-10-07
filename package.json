@@ -2,13 +2,14 @@
   "name": "gcloud",
   "version": "0.0.9",
   "description": "",
-  "main": "dist/puppeteer.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "npm run build && npm run prod:serve",
     "prod:serve": "node dist/server.js",
-    "run-func": "ts-node ./src/func.ts"
+    "run-func": "ts-node ./src/func.ts",
+    "deploy": "./deploy.sh"
   },
   "keywords": [
     "puppeteer",
